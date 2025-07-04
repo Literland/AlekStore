@@ -1,0 +1,22 @@
+.banner {
+  background: linear-gradient(90deg, #f8e1f4 0%, #c7e9f7 100%);
+  color: #a14d7c;
+  text-align: center;
+  padding: 2.5rem 1rem 2rem 1rem;
+  border-radius: 0 0 2rem 2rem;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 2px 16px #e7b6d6aa;
+}
+
+.banner h1 {
+  font-size: 2.7rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 2px;
+  color: #a14d7c;
+}
+
+.banner p {
+  font-size: 1.15rem;
+  margin: 0.2rem 0;
+  color: #7b5e7b;
+}

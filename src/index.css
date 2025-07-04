@@ -1,11 +1,11 @@
 /*
-  Estilos globales para AlekStore
+  Estilos globales para AlekStore (colores pastel y fondo suave)
 */
 
 body {
   margin: 0;
   padding: 0;
-  background: #fff6fa;
+  background: #fdf6fa;
   min-height: 100vh;
 }
 
@@ -14,6 +14,11 @@ body {
 }
 
 :root {
+  --color-principal: #e7b6d6;
+  --color-secundario: #c7e9f7;
+  --color-acento: #a14d7c;
+  --color-fondo: #fdf6fa;
+
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;

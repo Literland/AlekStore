@@ -1,5 +1,5 @@
 /*
-  Estilos para AlekStore - Tienda Virtual
+  Estilos para AlekStore - Tienda Virtual (colores pastel y diseño moderno)
 */
 
 .store-container {
@@ -7,7 +7,7 @@
   margin: 0 auto;
   padding: 2rem 1rem;
   font-family: 'Segoe UI', Arial, sans-serif;
-  background: #fff6fa;
+  background: #fdf6fa;
 }
 
 .store-header {
@@ -35,42 +35,44 @@
 .products-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-  gap: 2rem;
+  gap: 2.2rem;
 }
 
 .product-card {
-  background: #fff;
-  border-radius: 1rem;
-  box-shadow: 0 2px 12px #e7548033;
+  background: linear-gradient(135deg, #f8e1f4 0%, #c7e9f7 100%);
+  border-radius: 1.2rem;
+  box-shadow: 0 2px 16px #e7b6d6aa;
   padding: 1.5rem 1rem 1rem 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: box-shadow 0.2s;
+  transition: box-shadow 0.2s, transform 0.2s;
 }
 
 .product-card:hover {
-  box-shadow: 0 4px 24px #e7548055;
+  box-shadow: 0 4px 32px #e7b6d6cc;
+  transform: translateY(-4px) scale(1.03);
 }
 
 .product-img {
-  width: 120px;
-  height: 120px;
+  width: 130px;
+  height: 130px;
   object-fit: cover;
-  border-radius: 0.7rem;
+  border-radius: 0.8rem;
   margin-bottom: 1rem;
   background: #f9e6ef;
+  border: 2px solid #e7b6d6;
 }
 
 .product-card h2 {
-  font-size: 1.2rem;
-  color: #E75480;
+  font-size: 1.18rem;
+  color: #a14d7c;
   margin: 0.5rem 0 0.2rem 0;
 }
 
 .product-card p {
-  color: #444;
-  font-size: 0.98rem;
+  color: #7b5e7b;
+  font-size: 0.99rem;
   margin-bottom: 0.7rem;
   text-align: center;
 }
@@ -84,9 +86,9 @@
 .product-options select {
   padding: 0.3rem 0.7rem;
   border-radius: 0.5rem;
-  border: 1px solid #e75480;
+  border: 1px solid #e7b6d6;
   background: #fff6fa;
-  color: #e75480;
+  color: #a14d7c;
   font-weight: 500;
 }
 
@@ -99,7 +101,7 @@
 }
 
 .product-price {
-  color: #E75480;
+  color: #a14d7c;
   font-size: 1.1rem;
   font-weight: bold;
 }
@@ -117,4 +119,43 @@
 
 .whatsapp-btn:hover {
   background: #128C7E;
+}
+
+.filters-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  background: #f8e1f4;
+  border-radius: 1rem;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 1px 8px #e7b6d633;
+  align-items: center;
+}
+
+.filters-bar select, .filters-bar input[type="range"] {
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.5rem;
+  border: 1px solid #e7b6d6;
+  background: #fff6fa;
+  color: #a14d7c;
+  font-weight: 500;
+  margin-right: 0.5rem;
+}
+
+.price-filter {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.price-filter label {
+  color: #a14d7c;
+  font-size: 0.98rem;
+}
+
+.price-filter span {
+  color: #7b5e7b;
+  font-size: 1rem;
+  font-weight: 600;
 }
