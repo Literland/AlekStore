@@ -55,7 +55,7 @@ const ProductList: React.FC = () => {
   };
 
   // Generar enlace de detalles (simulado)
-  const getProductUrl = (product: Product) => `${window.location.origin}/#producto-${product.id}`;
+  const getProductUrl = (product: Product) => `https://literland.github.io/AlekStore/#producto-${product.id}`;
 
   return (
     <div className="store-container">
