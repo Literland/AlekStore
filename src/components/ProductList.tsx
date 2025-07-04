@@ -3,7 +3,6 @@ import { products } from '../data/products';
 import type { Product } from '../data/products';
 import AlekStoreLogo from '../assets/AlekStoreLogo';
 import Filters from './Filters';
-import './ProductList.css';
 
 const whatsappNumber = '+51929428382';
 
@@ -58,11 +57,11 @@ const ProductList: React.FC = () => {
   const getProductUrl = (product: Product) => `https://literland.github.io/AlekStore/#producto-${product.id}`;
 
   return (
-    <div className="store-container">
-      <header className="store-header">
+    <div className="max-w-7xl mx-auto px-4">
+      <header className="flex flex-col items-center gap-2 py-4">
         <AlekStoreLogo />
-        <h1>AlekStore</h1>
-        <p>¡Bienvenida a tu tienda de belleza y moda!</p>
+        <h1 className="text-2xl font-bold text-pink-700">AlekStore</h1>
+        <p className="text-pink-500">¡Bienvenida a tu tienda de belleza y moda!</p>
       </header>
       <Filters
         categories={categories}
@@ -72,15 +71,15 @@ const ProductList: React.FC = () => {
         maxPrice={maxPrice}
         onFilter={handleFilter}
       />
-      <div className="products-grid">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 py-6">
         {filtered.map((product) => (
-          <div className="product-card" key={product.id} id={`producto-${product.id}`}>
-            <img src={product.image} alt={product.name} className="product-img" />
-            <h2>{product.name}</h2>
-            <p>{product.description}</p>
-            <div className="product-options">
+          <div className="bg-white rounded-xl shadow-lg hover:shadow-pink-200 transition-shadow flex flex-col items-center p-4 relative" key={product.id} id={`producto-${product.id}`}>
+            <img src={product.image} alt={product.name} className="w-32 h-32 object-contain mb-2 rounded-lg border border-pink-100 bg-pink-50" />
+            <h2 className="text-lg font-semibold text-pink-700 mb-1">{product.name}</h2>
+            <p className="text-sm text-gray-500 mb-2 text-center">{product.description}</p>
+            <div className="flex flex-wrap gap-2 mb-2 w-full justify-center">
               {product.options.talla && (
-                <select onChange={e => handleSelect(product.id, 'Talla', e.target.value)}>
+                <select className="border rounded px-2 py-1 text-sm" onChange={e => handleSelect(product.id, 'Talla', e.target.value)}>
                   <option value="">Talla</option>
                   {product.options.talla.map((t) => (
                     <option key={t} value={t}>{t}</option>
@@ -88,7 +87,7 @@ const ProductList: React.FC = () => {
                 </select>
               )}
               {product.options.color && (
-                <select onChange={e => handleSelect(product.id, 'Color', e.target.value)}>
+                <select className="border rounded px-2 py-1 text-sm" onChange={e => handleSelect(product.id, 'Color', e.target.value)}>
                   <option value="">Color</option>
                   {product.options.color.map((c) => (
                     <option key={c} value={c}>{c}</option>
@@ -96,7 +95,7 @@ const ProductList: React.FC = () => {
                 </select>
               )}
               {product.options.modelo && (
-                <select onChange={e => handleSelect(product.id, 'Modelo', e.target.value)}>
+                <select className="border rounded px-2 py-1 text-sm" onChange={e => handleSelect(product.id, 'Modelo', e.target.value)}>
                   <option value="">Modelo</option>
                   {product.options.modelo.map((m) => (
                     <option key={m} value={m}>{m}</option>
@@ -104,15 +103,15 @@ const ProductList: React.FC = () => {
                 </select>
               )}
             </div>
-            <div className="product-footer">
-              <span className="product-price">S/ {product.price}</span>
+            <div className="flex items-center justify-between w-full mt-auto">
+              <span className="text-pink-600 font-bold text-lg">S/ {product.price}</span>
               <a
-                className="whatsapp-btn"
-                href={`https://wa.me/${whatsappNumber.replace('+', '')}?text=${encodeURIComponent(getProductMessage(product, selectedOptions[product.id] || {}, getProductUrl(product)))}&amp;source=&amp;data=${encodeURIComponent(product.image)}`}
+                className="ml-auto bg-green-500 hover:bg-green-600 text-white font-semibold px-3 py-1 rounded flex items-center gap-1 transition-colors text-sm shadow"
+                href={`https://wa.me/${whatsappNumber.replace('+', '')}?text=${encodeURIComponent(getProductMessage(product, selectedOptions[product.id] || {}, getProductUrl(product)))}&source=&data=${encodeURIComponent(product.image)}`}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Consultar y Comprar por WhatsApp
+                Consultar y Comprar
               </a>
             </div>
           </div>
