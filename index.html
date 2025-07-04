@@ -58,7 +58,7 @@
                   ${producto.tallas.map(t => `<option value="${t}">${t}</option>`).join('')}
                 </select>
               </div>
-              <a class="buy-btn" href="#" onclick="buyProduct('${producto.nombre}', 'color-${categoria.categoria}-${idx}', 'talla-${categoria.categoria}-${idx}')">Comprar por WhatsApp</a>
+              <a class="buy-btn" href="#" onclick="buyProduct('${producto.nombre}', 'color-${categoria.categoria}-${idx}', 'talla-${categoria.categoria}-${idx}', '${window.location.origin}/${producto.imagen}')">Comprar por WhatsApp</a>
             `;
             catDiv.appendChild(prodDiv);
           });
@@ -70,13 +70,15 @@
         console.error(error);
       });
 
-    function buyProduct(product, colorId, tallaId) {
-      const color = document.getElementById(colorId).value;
-      const talla = document.getElementById(tallaId).value;
-      const mensaje = `Hola, quiero comprar ${product} - Color: ${color} - Talla: ${talla}`;
-      const telefono = '51916717185'; // tu número con código de país
-      const url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
-      window.open(url, '_blank');
+    function buyProduct(product, colorId, tallaId, imagen) {
+  const color = document.getElementById(colorId).value;
+  const talla = document.getElementById(tallaId).value;
+  const mensaje = `Hola, quiero comprar *${product}* - Color: ${color} - Talla: ${talla}%0A%0AMás info en: ${window.location.href}%0AImagen del producto: ${imagen}`;
+  const telefono = '916717185'; // 51
+  const url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
+  window.open(url, '_blank');
+}
+
     }
   </script>
 </body>
