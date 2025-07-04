@@ -4,6 +4,7 @@ import './App.css';
 import Footer from './components/Footer';
 import Banner from './components/Banner';
 import Slider from './components/Slider';
+import FloatingWhatsApp from './components/FloatingWhatsApp';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Slider />
       <ProductList />
       <Footer />
+      <FloatingWhatsApp />
     </>
   );
 }
