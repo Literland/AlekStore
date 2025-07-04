@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /*
   Estilos globales para AlekStore (colores pastel y fondo suave)
 */
