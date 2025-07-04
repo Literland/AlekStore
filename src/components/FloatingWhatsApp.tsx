@@ -1,7 +1,7 @@
 import React from 'react';
 
 const whatsappNumber = '+51929428382';
-const message = '¡Hola! Quiero más información sobre AlekStore.';
+const message = '¡Hola! Quiero más información sobre este producto de AlekStore.';
 
 const FloatingWhatsApp: React.FC = () => (
   <a
