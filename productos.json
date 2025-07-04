@@ -1,11 +1,11 @@
 [
   {
-    "categoria": "Joyería",
+    "categoria": "Joyerï¿½a",
     "productos": [
       {
         "nombre": "Collar Elegante Pastel",
         "descripcion": "Hermoso collar en tonos pastel, perfecto para complementar tu look delicado y femenino.",
-        "imagen": "imagenes/collar.jpg",
+        "imagen": "imagenes/Collar Elegante Pastel.jpg",
         "colores": ["Lila", "Rosa", "Celeste"],
         "tallas": ["Ajustable", "Corto", "Largo"]
       }
@@ -15,11 +15,11 @@
     "categoria": "Moda",
     "productos": [
       {
-        "nombre": "Bolso Chic",
+        "nombre": "Bolso Chica",
         "descripcion": "Bolso elegante para complementar cualquier outfit con un toque pastel.",
         "imagen": "imagenes/bolso.jpg",
         "colores": ["Beige", "Negro"],
-        "tallas": ["Única"]
+        "tallas": ["ï¿½nica"]
       }
     ]
   }
